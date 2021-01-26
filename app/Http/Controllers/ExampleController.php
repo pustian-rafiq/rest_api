@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use APP\User;
 class ExampleController extends Controller
 {
     /**
@@ -14,5 +14,10 @@ class ExampleController extends Controller
         //
     }
 
-    //
+    public function myMethod($name){
+        return response($name)
+                ->header('name',$name)
+                ->header('age','25')
+                ->header('district','Satkhira');
+    }
 }
